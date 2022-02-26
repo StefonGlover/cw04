@@ -30,7 +30,7 @@
 
         //Exercise 3
         echo "<h1>Exercise 3: Triangle Function</h1>";
-        triangle(10);
+        triangle(22);
 
         function triangle($size){
             if(is_numeric($size))
@@ -58,6 +58,42 @@
 
          //Exercise 4
          echo "<h1>Exercise 4: Word Count Function</h1>";
+         
+         word_count("Hello, how are you?");
+         
+         function word_count($word){
+            $count = str_word_count($word);
+            echo $count;
+
+         }
+
+           //Exercise 5
+           echo "<h1>Exercise 5: Word Occurance Function</h1>";
+
+           countWords("I want to be the very best that no one ever was. To catch them is my real test, to train them is my cause.");
+
+           function countWords($str){
+               $words = str_word_count($str, 1);
+               
+               $numOfOccurance = array_count_values($words);
+
+               print_r($numOfOccurance);
+           }
+
+            //Exercise 6
+            echo "<h1>Exercise 6: Remove Function</h1>";
+
+            $word = "Programmer";
+        
+
+            echo "Before character removal: ".$word . "<br>";
+
+            remove_all($word, "m");
+
+            function remove_all($str, $char){
+                echo "After removal: " .preg_replace("[$char]", "", $str);
+            }
+            
     ?>
 </body>
 </html>
